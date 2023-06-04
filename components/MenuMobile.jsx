@@ -9,13 +9,6 @@ const data = [
     { id: 4, name: "Contact", url: "/contact" },
 ];
 
-const subMenuData = [
-    { id: 1, name: "Jordan", doc_count: 11 },
-    { id: 2, name: "Sneakers", doc_count: 8 },
-    { id: 3, name: "Running shoes", doc_count: 64 },
-    { id: 4, name: "Football shoes", doc_count: 107 },
-];
-
 const MenuMobile = ({
     showCatMenu,
     setShowCatMenu,
@@ -24,7 +17,7 @@ const MenuMobile = ({
 }) => {
     return (
         <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
-            {data.map((item) => {
+            {data?.map((item) => {
                 return (
                     <React.Fragment key={item.id}>
                         {!!item?.subMenu ? (
@@ -44,7 +37,7 @@ const MenuMobile = ({
                                                 return (
                                                     <Link
                                                         key={id}
-                                                        href={`/category/${c.slug}`}
+                                                        href={`/category/${c?.slug}`}
                                                         onClick={() => {
                                                             setShowCatMenu(
                                                                 false
@@ -55,9 +48,9 @@ const MenuMobile = ({
                                                         }}
                                                     >
                                                         <li className="py-4 px-8 border-t flex justify-between">
-                                                            {c.name}
+                                                            {c?.name}
                                                             <span className="opacity-50 text-sm">
-                                                                {`(${c.products.data.length})`}
+                                                                {`(${c?.products?.data?.length})`}
                                                             </span>
                                                         </li>
                                                     </Link>

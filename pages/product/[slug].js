@@ -38,7 +38,7 @@ const ProductDetails = ({ product, products }) => {
                 <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
                     {/* left column start */}
                     <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-                        <ProductDetailsCarousel images={p.image.data} />
+                        <ProductDetailsCarousel images={p?.image?.data} />
                     </div>
                     {/* left column end */}
 
@@ -62,12 +62,12 @@ const ProductDetails = ({ product, products }) => {
                             {p.original_price && (
                                 <>
                                     <p className="text-base  font-medium line-through">
-                                        &#8377;{p.original_price}
+                                        &#8377;{p?.original_price}
                                     </p>
                                     <p className="ml-auto text-base font-medium text-green-500">
                                         {getDiscountedPricePercentage(
-                                            p.original_price,
-                                            p.price
+                                            p?.original_price,
+                                            p?.price
                                         )}
                                         % off
                                     </p>
@@ -100,7 +100,7 @@ const ProductDetails = ({ product, products }) => {
                                 id="sizesGrid"
                                 className="grid grid-cols-3 gap-2"
                             >
-                                {p.size.data.map((item, i) => (
+                                {p?.size?.data?.map((item, i) => (
                                     <div
                                         key={i}
                                         className={`border rounded-md text-center py-3 font-medium ${

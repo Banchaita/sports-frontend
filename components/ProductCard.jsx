@@ -11,7 +11,7 @@ const ProductCard = ({ data: { attributes: p, id } }) => {
             <Image
                 width={500}
                 height={500}
-                src={p.thumbnail.data.attributes.url}
+                src={p?.thumbnail?.data?.attributes.url}
                 alt={p.name}
             />
             <div className="p-4 text-black/[0.9]">
@@ -28,8 +28,8 @@ const ProductCard = ({ data: { attributes: p, id } }) => {
                             </p>
                             <p className="ml-auto text-base font-medium text-green-500">
                                 {getDiscountedPricePercentage(
-                                    p.original_price,
-                                    p.price
+                                    p?.original_price,
+                                    p?.price
                                 )}
                                 % off
                             </p>

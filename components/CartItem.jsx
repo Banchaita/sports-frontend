@@ -22,7 +22,7 @@ const CartItem = ({ data }) => {
             {/* IMAGE START */}
             <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
                 <Image
-                    src={p.thumbnail.data.attributes.url}
+                    src={p.thumbnail?.data?.attributes.url}
                     alt={p.name}
                     width={120}
                     height={120}
@@ -63,19 +63,19 @@ const CartItem = ({ data }) => {
                                     updateCartItem(e, "selectedSize")
                                 }
                             >
-                                {p.size.data.map((item, i) => {
+                                {p?.size?.data?.map((item, i) => {
                                     return (
                                         <option
                                             key={i}
-                                            value={item.size}
+                                            value={item?.size}
                                             disabled={
                                                 !item.enabled ? true : false
                                             }
                                             selected={
-                                                data.selectedSize === item.size
+                                                data?.selectedSize === item?.size
                                             }
                                         >
-                                            {item.size}
+                                            {item?.size}
                                         </option>
                                     );
                                 })}
