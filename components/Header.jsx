@@ -56,8 +56,12 @@ const Header = () => {
         >
             <Wrapper className="h-[60px] flex justify-between items-center">
                 <Link href="/">
-                        <p className="text-[24px] text-black font-semibold">Dogra Sports</p>
-                    {/* <img src="/logo.svg" className="w-[40px] md:w-[60px]" /> */}
+                        {/* <p className="text-[24px] text-black font-semibold">Dogra Sports</p> */}
+                    <img src="/logo.jpg" className="w-[160px] h-[30px] md:w-[150px]" />
+                    {/* <img
+                        src="/slide-1.png"
+                        className="aspect-[16/10] md:aspect-auto object-cover"
+                    /> */}
                 </Link>
 
                 <Menu

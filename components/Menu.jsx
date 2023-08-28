@@ -42,7 +42,7 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                                                             {c.name}
                                                             <span className="opacity-50 text-sm">
                                                                 {`(${c?.products?.data?.length})`}
-                                                            </span>
+                                                            </span> 
                                                         </li>
                                                     </Link>
                                                 );

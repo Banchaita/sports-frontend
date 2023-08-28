@@ -108,3 +108,29 @@
 .markdown ul li {
     margin: 10px 0;
 }
+
+.colorlib-video {
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    height: 580px;
+
+}
+
+.colorlib-video .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; 
+}
+.colorlib-video:hover .overlay {
+    background: rgba(0, 0, 0, 0.7); 
+}
+

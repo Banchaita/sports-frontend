@@ -2,10 +2,12 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { BiArrowBack } from "react-icons/bi";
+import Breadcrumb from "./Breadcrumb";
 
-const HeroBanner = () => {
+
+const HeroAboutBanner = () => {
     return (
-        <div className="relative text-white text-[20px] w-full max-w-[1360px] mx-auto">
+        <div className="relative text-white text-[20px]">
             <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
@@ -31,36 +33,30 @@ const HeroBanner = () => {
             >
                 <div>
                     <img
-                        src="/slide-1.png"
-                        className="aspect-[16/10] md:aspect-auto object-cover"
+                        src="/about-slider.jpg"
+                        className="aspect-[60/10] md:aspect-auto object-cover w-[500px] h-[350px]"
                     />
-                    <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
-                        Shop now
-                    </div>
                 </div>
 
                 <div>
                     <img
-                        src="/slide-2.png"
-                        className="aspect-[16/10] md:aspect-auto object-cover"
+                        src="/about-slider2.jpg"
+                        className="aspect-[16/10] md:aspect-auto object-cover w-[500px] h-[350px]"
                     />
-                    <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
-                        Shop now
-                    </div>
                 </div>
 
                 <div>
                     <img
-                        src="/slide-3.png"
-                        className="aspect-[16/10] md:aspect-auto object-cover"
+                        src="/about-slider3.jpg"
+                        className="aspect-[16/10] md:aspect-auto object-cover w-[500px] h-[350px]"
                     />
-                    <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
-                        Shop now
-                    </div>
                 </div>
             </Carousel>
+            <div className="absolute top-0 left-0 w-full flex items-center justify-center h-full">
+                <Breadcrumb />
+            </div>
         </div>
     );
 };
 
-export default HeroBanner;
+export default HeroAboutBanner;
